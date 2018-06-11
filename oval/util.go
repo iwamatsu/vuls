@@ -32,7 +32,6 @@ import (
 	debver "github.com/knqyf263/go-deb-version"
 	rpmver "github.com/knqyf263/go-rpm-version"
 	"github.com/kotakanbe/goval-dictionary/db"
-	ovallog "github.com/kotakanbe/goval-dictionary/log"
 	ovalmodels "github.com/kotakanbe/goval-dictionary/models"
 	"github.com/parnurzeal/gorequest"
 )
@@ -218,7 +217,6 @@ func httpGet(url string, req request, resChan chan<- response, errChan chan<- er
 }
 
 func getDefsByPackNameFromOvalDB(r *models.ScanResult) (relatedDefs ovalResult, err error) {
-	ovallog.Initialize(config.Conf.LogDir)
 	path := config.Conf.OvalDBURL
 	if config.Conf.OvalDBType == "sqlite3" {
 		path = config.Conf.OvalDBPath

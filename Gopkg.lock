@@ -210,10 +210,9 @@
     "config",
     "db",
     "db/rdb",
-    "log",
     "models"
   ]
-  revision = "5f6caf8e94afbd280b9d55026cef351cb24c0889"
+  revision = "4cd16b2406903b56cb1b5e0c12c9e1d33005f7f8"
 
 [[projects]]
   branch = "master"
